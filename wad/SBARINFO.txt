@@ -1,0 +1,130 @@
+// reference: https://zdoom.org/wiki/SBARINFO
+// stock definition: $PROGDIR/gzdoom.pk3/sbarinfo/doom.txt
+
+// sets the status bar to the specified game
+// valid games are Doom, Heretic, Hexen, Strife, and None.
+base DOOM;
+
+// setting this to 0 (ZERO) will tell GZDoom to use a fullscreen viewport
+// so the normal statusbar will be drawn without using GRNROCK flats as borders
+height 0;
+
+// if true, continues drawing the border where the status bar is normally placed
+// using this will remove the HOM. If false, the border is not drawn behind the status bar
+CompleteBorder true;
+
+// monospaces all fonts to the specified character of their font
+// alignment changes the position of off size characters within their spacing
+MonospaceFonts true, "0", center;
+
+// keep "resolution 320, 200;" to let the hud be affected by GZDoom's scaling just like the stock StatusBar is
+// when in game, to avoid any pixel-scaling distortion, I would then suggest to either:
+//  - execute "hud_AspectScale true; hud_scale 6; vid_ScaleToHeight 1440"
+//  - execute "hud_AspectScale true; hud_scale 3; vid_ScaleToHeight 720"
+resolution 320, 200;
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// standard StatusBar, used in the automap screen
+// we define it as EMPTY, so only stats and mapname will be displayed
+StatusBar AutoMap {}
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// standard StatusBar and InventoryBar, used when ScreenBlocks<=10
+// we leave both commented, so GZDoom will provide the stock resources
+//StatusBar Inventory {}
+//StatusBar Normal {}
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// FullScreen InventoryBar
+// provided in case a mod makes use of it
+StatusBar InventoryFullscreen, FullscreenOffsets
+{
+	DrawInventoryBar DOOM, AlwaysShowCounter, NoArtiBox, 1, NHIDXNUM, 61, -34, 88, -14, untranslated;
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// FullScreen HUD, used when ScreenBlocks=11
+// this is where the magic happens ;)
+StatusBar Fullscreen, FullscreenOffsets
+{
+	//InventoryItem
+	DrawSelectedInventory AlwaysShowCounter, NHIDXNUM, 61, -34, 88, -14, untranslated;
+
+	//health
+	DrawImage "NHBHLTH", 6, -19;
+	ifHealth 101 {
+		DrawNumber 3, NHBIGNUM, NHCLRBLU, health, 31, -17;
+	} else
+	ifHealth 51 {
+		DrawNumber 3, NHBIGNUM, NHCLRGRN, health, 31, -17;
+	} else
+	ifHealth 26 {
+		DrawNumber 3, NHBIGNUM, NHCLRGLD, health, 31, -17;
+	} else {
+		DrawNumber 3, NHBIGNUM, NHCLRRED, health, 31, -17;
+	}
+
+	//armor
+	DrawImage "NHBARMR", 6, -34;
+	InInventory BasicArmor, 101 {
+		DrawNumber 3, NHBIGNUM, NHCLRBLU, armor, 31, -32;
+	} else
+	InInventory BasicArmor, 51 {
+		DrawNumber 3, NHBIGNUM, NHCLRGRN, armor, 31, -32;
+	} else
+	InInventory BasicArmor, 26 {
+		DrawNumber 3, NHBIGNUM, NHCLRGLD, armor, 31, -32;
+	} else {
+		DrawNumber 3, NHBIGNUM, NHCLRRED, armor, 31, -32;
+	}
+
+	//keys (from top to bottom: blue, yellow, red)
+	DrawImage "NHBKEYS", 49, -34;
+	DrawSwitchableImage KeySlot 2 && 5, "nullimage", "NHKEYS0", "NHKEYS3", "NHKEYS6", 51, -32;
+	DrawSwitchableImage KeySlot 3 && 6, "nullimage", "NHKEYS1", "NHKEYS4", "NHKEYS7", 51, -23;
+	DrawSwitchableImage KeySlot 1 && 4, "nullimage", "NHKEYS2", "NHKEYS5", "NHKEYS8", 51, -14;
+
+	//current clip & ammo availability
+	UsesSecondaryAmmo {
+		DrawImage "NHBAMM2", -48, -34;
+		DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo1, -23, -32;
+		DrawNumber 3, NHIDXNUM, untranslated, Ammo1capacity, alignment(center), -15, -29;
+		DrawImage "NHBAMM2", -48, -19;
+		DrawImage AmmoIcon2, -15, -12, center, 10, 8;
+		DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo2, -23, -17;
+	} else UsesAmmo {
+		DrawImage "NHBAMM2", -48, -19;
+		DrawImage AmmoIcon1, -15, -12, center, 10, 8;
+		DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo1, -23, -17;
+	} else {
+		DrawImage "NHBAMM2", -48, -19;
+		DrawImage WeaponIcon, -27, -12, center, 36, 8;
+	}
+
+/*  //ONLY FOR THE STOCK PLAYER ACTOR (PlayerType=DoomPlayer, PlayerClass=Marine)
+	//current ammo, weapon slots, available ammos tally
+	DrawImage "NHBAMMO", -65, 181;
+	DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo1, -40, 183;
+	DrawImage "NHBTLLY", -36, 167;
+	DrawNumber 3, NHIDXNUM, untranslated, ammo(Clip)      , -8, 170;
+	DrawNumber 3, NHIDXNUM, untranslated, ammo(Shell)     , -8, 176;
+	DrawNumber 3, NHIDXNUM, untranslated, ammo(RocketAmmo), -8, 182;
+	DrawNumber 3, NHIDXNUM, untranslated, ammo(Cell)      , -8, 188;
+	inInventory Chainsaw      , 1 { DrawImage "NHW1NUM8", -63, 170; } else { DrawImage "NHW0NUM8",  -63, 170;}
+	inInventory Pistol        , 1 { DrawImage "NHW1NUM2", -34, 170; } else { DrawImage "NHW0NUM2",  -34, 170;}
+	inInventory Chaingun      , 1 { DrawImage "NHW1NUM4", -34, 170; } else { DrawImage "NHW0NUM4",  -34, 170;}
+	inInventory Shotgun       , 1 { DrawImage "NHW1NUM3", -34, 176; } else { DrawImage "NHW0NUM3",  -34, 176;}
+	inInventory SuperShotgun  , 1 { DrawImage "NHW1NUM9", -34, 176; } else { DrawImage "NHW0NUM9",  -34, 176;}
+	inInventory RocketLauncher, 1 { DrawImage "NHW1NUM5", -34, 182; } else { DrawImage "NHW0NUM5",  -34, 182;}
+	inInventory PlasmaRifle   , 1 { DrawImage "NHW1NUM6", -34, 188; } else { DrawImage "NHW0NUM6",  -34, 188;}
+	inInventory BFG9000       , 1 { DrawImage "NHW1NUM7", -34, 188; } else { DrawImage "NHW0NUM7",  -34, 188;}
+*/
+}
