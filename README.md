@@ -12,7 +12,7 @@ Nugget Doom & stock arsenal:
 
 GZDoom & Supercharge mod:
 
-![README](https://raw.githubusercontent.com/liPillON/nughud_minimal/main/README.png)
+![README](https://raw.githubusercontent.com/liPillON/nughud_minimal/main/SBARINFO.png)
 
 
 
