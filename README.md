@@ -16,7 +16,7 @@ GZDoom & Supercharge mod:
 
 
 
-Features:
+## Features:
 - custom, stylish HUD elements
 - support both 4:3 and Widescreen aspect ratios (NUGHUD) 
 - weaponslot indicators reimplemented as icons, instead of numbers (NUGHUD)
@@ -24,11 +24,11 @@ Features:
 - adjusted position for mapname/time/stats widget (NUGHUD, with SBARINFO planned)
 
 
-Credits:
+## Credits:
 - the "NHTNUMx" lumps are slightly edited "NHUD_DLx" lumps from the [Eternity Engine](https://github.com/team-eternity/eternity/tree/master/base/doom/res/graphics/newhud) project
 
 
-Downloads:
+## Downloads:
 - [this](https://github.com/liPillON/nughud_minimal/releases/latest) is the latest release.
 - [this](https://github.com/liPillON/nughud_minimal/archive/refs/heads/main.zip) is the current repository snapshot.
 
