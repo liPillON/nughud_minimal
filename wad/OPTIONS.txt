@@ -1,4 +1,3 @@
-show_berserk 0
 sts_always_red 0
 sts_pct_always_gray 1
 sts_traditional_keys 0
