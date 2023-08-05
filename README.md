@@ -26,7 +26,7 @@ GZDoom & Supercharge mod:
 
 ## Credits:
 - the "NHTNUMx" lumps are slightly edited "NHUD_DLx" lumps from the [Eternity Engine](https://github.com/team-eternity/eternity/tree/master/base/doom/res/graphics/newhud) project
-
+- the "GZIDXxxx" lumps are taken from the [Fullscreen Statusbar](https://github.com/3saster/fullscrn_huds/tree/master/fonts/oldfont) mod
 
 ## Downloads:
 - [this](https://github.com/liPillON/nughud_minimal/releases/latest) is the latest release.
