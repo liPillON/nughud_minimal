@@ -158,4 +158,44 @@ playerType DoomPlayer {
 	}
 }
 
+
+	//optional level stats
+	ifCvarInt nughud_LevelStats, 1, equal {
+		//kills
+		DrawString GZIDXFNT, untranslated, "K", 12, -57;
+		DrawNumber 3, GZIDXFNT, untranslated, kills, 27, -57;
+		DrawString GZIDXFNT, untranslated, "/", 33, -57;
+		DrawNumber 3, GZIDXFNT, untranslated, monsters, 47, -57;
+		//items
+		DrawString GZIDXFNT, untranslated, "I", 12, -49;
+		DrawNumber 3, GZIDXFNT, untranslated, items, 27, -49;
+		DrawString GZIDXFNT, untranslated, "/", 33, -49;
+		DrawNumber 3, GZIDXFNT, untranslated, totalItems, 47, -49;
+		//secrets
+		DrawString GZIDXFNT, untranslated, "S", 12, -41;
+		DrawNumber 3, GZIDXFNT, untranslated, secrets, 27, -41;
+		DrawString GZIDXFNT, untranslated, "/", 33, -41;
+		DrawNumber 3, GZIDXFNT, untranslated, totalSecrets, 47, -41;
+	}
+
+
+	//optional powerup timers
+	ifCvarInt nughud_PowerupTimers, 1, equal {
+		inInventory PowerLightAmp, 1 {
+			DrawNumber 3, GZIDXFNT, untranslated, PowerupTime Infrared, -26, -65;
+			DrawString GZIDXFNT, untranslated, "LAMP", -8, -65;
+		}
+		inInventory PowerIronFeet, 1 {
+			DrawNumber 3, GZIDXFNT, untranslated, PowerupTime RadSuit, -26, -57;
+			DrawString GZIDXFNT, untranslated, "SUIT", -8, -57;
+		}
+		inInventory PowerInvisibility, 1 {
+			DrawNumber 3, GZIDXFNT, untranslated, PowerupTime BlurSphere, -26, -49;
+			DrawString GZIDXFNT, untranslated, "BLUR", -8, -49;
+		}
+		inInventory PowerInvulnerable, 1 {
+			DrawNumber 3, GZIDXFNT, untranslated, PowerupTime InvulnerabilitySphere, -26, -41;
+			DrawString GZIDXFNT, untranslated, "INVL", -8, -41;
+		}
+	}
 }
