@@ -39,15 +39,15 @@ nughud_weapheight 0
 ; HEALTH -----------------------------------------------------------------------
 
 ; background
-nughud_patch1_x 6
-nughud_patch1_y 181
-nughud_patch1_wide -1
-nughud_patch1_name "NHBHLTH"
+nughud_patch1_x       6
+nughud_patch1_y     181
+nughud_patch1_wide   -2
+nughud_patch1_name   "NHBHLTH"
 
 ; indicator
-nughud_health_x 31
-nughud_health_y 183
-nughud_health_wide -1
+nughud_health_x      31
+nughud_health_y     183
+nughud_health_wide   -2
 
 
 
@@ -55,15 +55,15 @@ nughud_health_wide -1
 ; ARMOR ------------------------------------------------------------------------
 
 ; background
-nughud_patch2_x 6
-nughud_patch2_y 166
-nughud_patch2_wide -1
-nughud_patch2_name "NHBARMR"
+nughud_patch2_x       6
+nughud_patch2_y     166
+nughud_patch2_wide   -2
+nughud_patch2_name   "NHBARMR"
 
 ; indicator
-nughud_armor_x 31
-nughud_armor_y 168
-nughud_armor_wide -1
+nughud_armor_x       31
+nughud_armor_y      168
+nughud_armor_wide    -2
 
 
 
@@ -71,25 +71,25 @@ nughud_armor_wide -1
 ; KEYS -------------------------------------------------------------------------
 
 ; background
-nughud_patch3_x 49
-nughud_patch3_y 166
-nughud_patch3_wide -1
-nughud_patch3_name "NHBKEYS"
+nughud_patch3_x      49
+nughud_patch3_y     166
+nughud_patch3_wide   -2
+nughud_patch3_name   "NHBKEYS"
 
 ; blue slot
-nughud_key0_x 51
-nughud_key0_y 168
-nughud_key0_wide -1
+nughud_key0_x        51
+nughud_key0_y       168
+nughud_key0_wide     -2
 
 ; yellow slot
-nughud_key1_x 51
-nughud_key1_y 177
-nughud_key1_wide -1
+nughud_key1_x        51
+nughud_key1_y       177
+nughud_key1_wide     -2
 
 ; red slot
-nughud_key2_x 51
-nughud_key2_y 186
-nughud_key2_wide -1
+nughud_key2_x        51
+nughud_key2_y       186
+nughud_key2_wide     -2
 
 
 
@@ -97,15 +97,15 @@ nughud_key2_wide -1
 ; AMMO -------------------------------------------------------------------------
 
 ; background
-nughud_patch4_x 255
-nughud_patch4_y 181
-nughud_patch4_wide 1
-nughud_patch4_name "NHBAMMO"
+nughud_patch4_x     255
+nughud_patch4_y     181
+nughud_patch4_wide    2
+nughud_patch4_name   "NHBAMMO"
 
 ; indicator
-nughud_ammo_x 280
-nughud_ammo_y 183
-nughud_ammo_wide 1
+nughud_ammo_x       280
+nughud_ammo_y       183
+nughud_ammo_wide      2
 
 
 
@@ -113,50 +113,50 @@ nughud_ammo_wide 1
 ; TALLY ------------------------------------------------------------------------
 
 ; background
-nughud_patch5_x 284
-nughud_patch5_y 167
-nughud_patch5_wide 1
-nughud_patch5_name "NHBTLLY"
+nughud_patch5_x     284
+nughud_patch5_y     167
+nughud_patch5_wide    2
+nughud_patch5_name   "NHBTLLY"
 
 ; available Bullets
-nughud_ammo0_x 312
-nughud_ammo0_y 170
-nughud_ammo0_wide 1
+nughud_ammo0_x      312
+nughud_ammo0_y      170
+nughud_ammo0_wide     2
 
 ; available Shells
-nughud_ammo1_x 312
-nughud_ammo1_y 176
-nughud_ammo1_wide 1
+nughud_ammo1_x      312
+nughud_ammo1_y      176
+nughud_ammo1_wide     2
 
 ; available Rockets
-nughud_ammo3_x 312
-nughud_ammo3_y 182
-nughud_ammo3_wide 1
+nughud_ammo3_x      312
+nughud_ammo3_y      182
+nughud_ammo3_wide     2
 
 ; available Cells
-nughud_ammo2_x 312
-nughud_ammo2_y 188
-nughud_ammo2_wide 1
+nughud_ammo2_x      312
+nughud_ammo2_y      188
+nughud_ammo2_wide     2
 
 ; maximum Bullets
-nughud_maxammo0_x -1
-nughud_maxammo0_y 170
-nughud_maxammo0_wide 1
+nughud_maxammo0_x    -1
+nughud_maxammo0_y   170
+nughud_maxammo0_wide  2
 
 ; maximum Shells
-nughud_maxammo1_x -1
-nughud_maxammo1_y 176
-nughud_maxammo1_wide 1
+nughud_maxammo1_x    -1
+nughud_maxammo1_y   176
+nughud_maxammo1_wide  2
 
 ; maximum Rockets
-nughud_maxammo3_x -1
-nughud_maxammo3_y 182
-nughud_maxammo3_wide 1
+nughud_maxammo3_x    -1
+nughud_maxammo3_y   182
+nughud_maxammo3_wide  2
 
 ; maximum Cells
-nughud_maxammo2_x -1
-nughud_maxammo2_y 188
-nughud_maxammo2_wide 1
+nughud_maxammo2_x    -1
+nughud_maxammo2_y   188
+nughud_maxammo2_wide  2
 
 
 
@@ -164,46 +164,46 @@ nughud_maxammo2_wide 1
 ;; ARMS -------------------------------------------------------------------------
 
 ; SLOT1 (MELEE)
-nughud_arms1_x -1
-nughud_arms1_y 170
-nughud_arms1_wide 1
+nughud_arms1_x       -1
+nughud_arms1_y      170
+nughud_arms1_wide     2
 
 ; SLOT8 (CHAINSAW)
-nughud_arms8_x 257
-nughud_arms8_y 170
-nughud_arms8_wide 1
+nughud_arms8_x      257
+nughud_arms8_y      170
+nughud_arms8_wide     2
 
 ; SLOT2 (BULLETS-PISTOL)
-nughud_arms2_x 286
-nughud_arms2_y 170
-nughud_arms2_wide 1
+nughud_arms2_x      286
+nughud_arms2_y      170
+nughud_arms2_wide     2
 
 ; SLOT4 (BULLETS-CHAINGUN)
-nughud_arms4_x 286
-nughud_arms4_y 170
-nughud_arms4_wide 1
+nughud_arms4_x      286
+nughud_arms4_y      170
+nughud_arms4_wide     2
 
 ; SLOT3 (SHELLS-SHOTGUN)
-nughud_arms3_x 286
-nughud_arms3_y 176
-nughud_arms3_wide 1
+nughud_arms3_x      286
+nughud_arms3_y      176
+nughud_arms3_wide     2
 
 ; SLOT9 (SHELLS-SUPERSHOTGUN)
-nughud_arms9_x 286
-nughud_arms9_y 176
-nughud_arms9_wide 1
+nughud_arms9_x      286
+nughud_arms9_y      176
+nughud_arms9_wide     2
 
 ; SLOT5 (ROCKETS-LAUNCHER)
-nughud_arms5_x 286
-nughud_arms5_y 182
-nughud_arms5_wide 1
+nughud_arms5_x      286
+nughud_arms5_y      182
+nughud_arms5_wide     2
 
 ; SLOT6 (CELLS-PRIFLE)
-nughud_arms6_x 286
-nughud_arms6_y 188
-nughud_arms6_wide 1
+nughud_arms6_x      286
+nughud_arms6_y      188
+nughud_arms6_wide     2
 
 ; SLOT7 (CELLS-BFG)
-nughud_arms7_x 286
-nughud_arms7_y 188
-nughud_arms7_wide 1
+nughud_arms7_x      286
+nughud_arms7_y      188
+nughud_arms7_wide     2
