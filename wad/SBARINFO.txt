@@ -45,7 +45,7 @@ StatusBar AutoMap {}
 // provided in case a mod makes use of it
 StatusBar InventoryFullscreen, FullscreenOffsets
 {
-	DrawInventoryBar DOOM, AlwaysShowCounter, NoArtiBox, 1, NHIDXNUM, 61, -34, 88, -14, untranslated;
+	DrawInventoryBar DOOM, AlwaysShowCounter, NoArtiBox, 1, NHIDXNUM, 62, -34, 89, -14, untranslated;
 }
 
 
@@ -56,7 +56,7 @@ StatusBar InventoryFullscreen, FullscreenOffsets
 StatusBar Fullscreen, FullscreenOffsets
 {
 	//InventoryItem
-	DrawSelectedInventory AlwaysShowCounter, NHIDXNUM, 61, -34, 88, -14, untranslated;
+	DrawSelectedInventory AlwaysShowCounter, NHIDXNUM, 62, -34, 89, -14, untranslated;
 
 	//health
 	DrawImage "NHBHLTH", 6, -19;
