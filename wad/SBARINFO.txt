@@ -97,21 +97,21 @@ playerType DoomPlayer {
 	playerClass Marine {
 		//PlayerType inherited from DoomPlayer, PlayerClass==Marine
 		//eg: Vanilla (actor DoomPlayer:PlayerPawn, DisplayName=Default)
-		DrawImage "NHBAMMO", -65, 181;
-		DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo1, -40, 183;
-		DrawImage "NHBTLLY", -36, 167;
-		DrawNumber 3, NHIDXNUM, untranslated, ammo(Clip)      , -8, 170;
-		DrawNumber 3, NHIDXNUM, untranslated, ammo(Shell)     , -8, 176;
-		DrawNumber 3, NHIDXNUM, untranslated, ammo(RocketAmmo), -8, 182;
-		DrawNumber 3, NHIDXNUM, untranslated, ammo(Cell)      , -8, 188;
-		inInventory Chainsaw      , 1 { DrawImage "NHW1NUM8", -63, 170; } else { DrawImage "NHW0NUM8",  -63, 170;}
-		inInventory Pistol        , 1 { DrawImage "NHW1NUM2", -34, 170; } else { DrawImage "NHW0NUM2",  -34, 170;}
-		inInventory Chaingun      , 1 { DrawImage "NHW1NUM4", -34, 170; } else { DrawImage "NHW0NUM4",  -34, 170;}
-		inInventory Shotgun       , 1 { DrawImage "NHW1NUM3", -34, 176; } else { DrawImage "NHW0NUM3",  -34, 176;}
-		inInventory SuperShotgun  , 1 { DrawImage "NHW1NUM9", -34, 176; } else { DrawImage "NHW0NUM9",  -34, 176;}
-		inInventory RocketLauncher, 1 { DrawImage "NHW1NUM5", -34, 182; } else { DrawImage "NHW0NUM5",  -34, 182;}
-		inInventory PlasmaRifle   , 1 { DrawImage "NHW1NUM6", -34, 188; } else { DrawImage "NHW0NUM6",  -34, 188;}
-		inInventory BFG9000       , 1 { DrawImage "NHW1NUM7", -34, 188; } else { DrawImage "NHW0NUM7",  -34, 188;}
+		DrawImage "NHBAMMO", -65, -19;
+		DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo1, -40, -17;
+		DrawImage "NHBTLLY", -36, -33;
+		DrawNumber 3, NHIDXNUM, untranslated, ammo(Clip)      , -8, -30;
+		DrawNumber 3, NHIDXNUM, untranslated, ammo(Shell)     , -8, -24;
+		DrawNumber 3, NHIDXNUM, untranslated, ammo(RocketAmmo), -8, -18;
+		DrawNumber 3, NHIDXNUM, untranslated, ammo(Cell)      , -8, -12;
+		inInventory Chainsaw      , 1 { DrawImage "NHW1NUM8", -63, -30; } else { DrawImage "NHW0NUM8",  -63, -30;}
+		inInventory Pistol        , 1 { DrawImage "NHW1NUM2", -34, -30; } else { DrawImage "NHW0NUM2",  -34, -30;}
+		inInventory Chaingun      , 1 { DrawImage "NHW1NUM4", -34, -30; } else { DrawImage "NHW0NUM4",  -34, -30;}
+		inInventory Shotgun       , 1 { DrawImage "NHW1NUM3", -34, -24; } else { DrawImage "NHW0NUM3",  -34, -24;}
+		inInventory SuperShotgun  , 1 { DrawImage "NHW1NUM9", -34, -24; } else { DrawImage "NHW0NUM9",  -34, -24;}
+		inInventory RocketLauncher, 1 { DrawImage "NHW1NUM5", -34, -18; } else { DrawImage "NHW0NUM5",  -34, -18;}
+		inInventory PlasmaRifle   , 1 { DrawImage "NHW1NUM6", -34, -12; } else { DrawImage "NHW0NUM6",  -34, -12;}
+		inInventory BFG9000       , 1 { DrawImage "NHW1NUM7", -34, -12; } else { DrawImage "NHW0NUM7",  -34, -12;}
 
 	} else {
 		//PlayerType inherited from DoomPlayer, PlayerClass<>Marine
