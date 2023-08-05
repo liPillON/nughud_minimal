@@ -17,11 +17,11 @@ GZDoom & Supercharge mod:
 
 
 ## Features:
-- custom, stylish HUD elements
-- support both 4:3 and Widescreen aspect ratios (NUGHUD) 
-- weaponslot indicators reimplemented as icons, instead of numbers (NUGHUD)
-- secondary ammo support, for gameplay mods that make use of it (SBARINFO)
-- adjusted position for mapname/time/stats widget (NUGHUD, with SBARINFO planned)
+- original/stylish HUD elements, not reliant on external iwad/pwad resources
+- always adjusted to your display's aspect ratios
+- weaponslot indicators reimplemented as icons, instead of numbers (NUGHUD & SBARINFO)
+- secondary ammo support, for gameplay mods that make use of it (SBARINFO only)
+- adjusted position for optional mapname/time/stats/powerups widgets (NUGHUD & SBARINFO)
 
 
 ## Credits:
