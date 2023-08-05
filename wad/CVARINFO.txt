@@ -1,0 +1,2 @@
+user bool nughud_LevelStats = false;
+user bool nughud_PowerupTimers = false;

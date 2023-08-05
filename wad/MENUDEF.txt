@@ -1,0 +1,67 @@
+AddOptionMenu OptionsMenu       { SubMenu "NUGHUD Settings", gzpMNU_MAIN }
+AddOptionMenu OptionsMenuSimple { SubMenu "NUGHUD Settings", gzpMNU_MAIN }
+
+
+OptionMenu gzpMNU_MAIN
+{
+	Title "NUGHUD"
+	StaticText "2023.08.08", Black
+	StaticText ""
+	StaticText "GZDoom Options", Gold
+	Option "Fullscreen HUD", screenblocks, gzFullscreenStatus
+	Option "Alternative HUD", hud_althud, OnOff
+	StaticText ""
+	StaticText "UI Scaling", Gold
+	Option "Factor", uiscale, gzUIScalingFactor
+	StaticText ""
+	StaticText "HUD Scaling", Gold
+	Option "Method", hud_oldscale, gzHUDScalingMethod
+	Option "Factor", hud_scale, gzHUDScalingFactor, hud_oldscale
+	Option "Keep Aspect Ratio", hud_aspectscale, YesNo
+	StaticText ""
+	StaticText "MOD Options", Gold
+	Option "Show Level Stats", nughud_LevelStats, YesNo
+	Option "Show Powerup Timers", nughud_PowerupTimers, YesNo
+}
+
+
+OptionValue gzFullscreenStatus
+{
+	11, "On"
+	10, "Off"
+}
+
+OptionValue gzUIScalingFactor
+{
+	 0, "Adapt to Screen Size"
+	 1, "1x (240p)"
+	 2, "2x (480p)"
+	 3, "3x (720p)"
+	 4, "4x (960p)"
+	 5, "5x (1200p)"
+	 6, "6x (1440p)"
+	 7, "7x (1680p)"
+	 8, "8x (1920p)"
+	 9, "9x (2160p)"
+}
+
+OptionValue gzHUDScalingMethod
+{
+	1, "Default"
+	0, "New"
+}
+
+OptionValue gzHUDScalingFactor
+{
+	-1, "Automatic"
+	 0, "Same as UI"
+	 1, "1x (240p)"
+	 2, "2x (480p)"
+	 3, "3x (720p)"
+	 4, "4x (960p)"
+	 5, "5x (1200p)"
+	 6, "6x (1440p)"
+	 7, "7x (1680p)"
+	 8, "8x (1920p)"
+	 9, "9x (2160p)"
+}
