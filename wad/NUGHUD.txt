@@ -193,10 +193,10 @@ nughud_maxammo2_wide  2
 
 ;; ARMS -------------------------------------------------------------------------
 
-; SLOT1 (MELEE)
-nughud_arms1_x       -1
-nughud_arms1_y      170
-nughud_arms1_wide     2
+; SLOT1 (MELEE/BERSERK)
+nughud_arms1_x       34
+nughud_arms1_y      183
+nughud_arms1_wide    -2
 
 ; SLOT8 (CHAINSAW)
 nughud_arms8_x      257
