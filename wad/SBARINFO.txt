@@ -98,7 +98,11 @@ playerType DoomPlayer {
 		//PlayerType inherited from DoomPlayer, PlayerClass==Marine
 		//eg: Vanilla (actor DoomPlayer:PlayerPawn, DisplayName=Default)
 		DrawImage "NHBAMMO", -65, -19;
-		DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo1, -40, -17;
+		UsesAmmo {
+			DrawNumber 3, NHBIGNUM, NHCLRGLD, Ammo1, -40, -17;
+		} else {
+			inInventory PowerStrength, 1 { DrawImage "NHBERSRK", -40, -17; }
+		}
 		DrawImage "NHBTLLY", -36, -33;
 		DrawNumber 3, NHIDXNUM, untranslated, ammo(Clip)      , -8, -30;
 		DrawNumber 3, NHIDXNUM, untranslated, ammo(Shell)     , -8, -24;
