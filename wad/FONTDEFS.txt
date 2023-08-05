@@ -1,3 +1,8 @@
+GZIDXFNT
+{
+	template GZIDX%03d
+}
+
 NHBIGNUM
 {
 	0 NHTNUM0
